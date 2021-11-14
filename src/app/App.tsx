@@ -1,14 +1,6 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-  useHistory,
-  useLocation,
-} from "react-router-dom";
+import { Route } from "wouter";
 
 import { Header } from "./layouts/Header";
 
@@ -26,21 +18,17 @@ class App extends React.Component<Record<string, unknown>, undefined> {
   public render() {
     return (
       <div className="app">
-        <Router>
-          <Header />
-          <Switch>
-            <Route exact path="/">
-              <MainPage />
-            </Route>
-            <Route path="/auth">
-              <Auth />
-            </Route>
-            <Route path="/registration">reg</Route>
-            <Route path="/create-article">
-              <UserArticles />
-            </Route>
-          </Switch>
-        </Router>
+        <Header />
+        <Route path="/">
+          <MainPage />
+        </Route>
+        <Route path="/auth">
+          <Auth />
+        </Route>
+        <Route path="/registration">reg</Route>
+        <Route path="/create-article">
+          <UserArticles />
+        </Route>
       </div>
     );
   }

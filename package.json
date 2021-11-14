@@ -77,7 +77,7 @@
     "firebase": "^9.0.2",
     "normalize.css": "^8.0.1",
     "react-hook-form": "^7.15.3",
-    "react-router-dom": "^5.3.0",
-    "vanilla-tilt": "^1.7.2"
+    "vanilla-tilt": "^1.7.2",
+    "wouter": "^2.8.0-alpha.2"
   }
 }
