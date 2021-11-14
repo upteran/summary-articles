@@ -1,0 +1,47 @@
+$white: #fff;
+$black: #000;
+
+.card {
+  position: relative;
+  border: 1px solid red;
+  background: green;
+  color: #fff;
+  line-height: 1.2;
+  overflow: hidden;
+  padding-bottom: 120%;
+
+  margin: auto;
+  border-radius: 1em;
+  border: 1px solid transparentize($white, 0.5);
+  text-shadow: 0 0 1em transparentize($black, 0.5);
+  background: transparentize($white, 0.8);
+  backdrop-filter: blur(20px);
+  transform: perspective(500px);
+  transform-style: preserve-3d;
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  padding: 8px;
+  width: 100%;
+  background: #000;
+}
+
+.cardTitle {
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+
+.cardDescription {
+  font-size: 14px;
+}
+
+.cardImg {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: auto;
+  transform: translateX(-50%);
+}
