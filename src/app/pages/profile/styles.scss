@@ -1,0 +1,55 @@
+$leftSidebarWith: 350px;
+
+.cardWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.userMainText {
+  flex: 1 1 calc(80% - $leftSidebarWith);
+  padding: 35px;
+  min-width: 600px;
+  border: 1px solid;
+}
+
+.userControllers {
+  flex: 0 0 $leftSidebarWith;
+  padding: 35px;
+  border: 1px solid;
+}
+.userName {
+  font-size: 24px;
+  padding: 15px 35px;
+}
+
+.userInfo {
+  display: flex;
+}
+
+.userSocial {
+  display: inline-block;
+  padding: 6px;
+  border: 1px solid;
+}
+
+.userMenu {
+  margin-top: 68px;
+  font-size: 16px;
+}
+
+.userMenuItem {
+  a {
+    color: black;
+    transition: color .25s ease-out;
+      &:hover {
+        color: green;
+        transition: color .25s ease-out;
+      }
+  }
+}
+
+.rightSidebar {
+  border: 1px solid;
+  flex: 0 1 20%;
+}

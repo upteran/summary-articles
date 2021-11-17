@@ -11,10 +11,13 @@ export const Header = () => {
         <Col span={6} offset={16}>
           <Space>
             <Button type="primary">
-              <Link to="/auth">auth</Link>
+              <Link href="/auth">auth</Link>
             </Button>
             <Button>
-              <Link to="/registration">auth</Link>
+              <Link href="/registration">auth</Link>
+            </Button>
+            <Button>
+              <Link href="/profile/pezeze">profile</Link>
             </Button>
           </Space>
         </Col>
