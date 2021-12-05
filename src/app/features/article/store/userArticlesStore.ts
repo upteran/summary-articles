@@ -1,34 +1,21 @@
-import { createEvent, createStore, createEffect } from "effector";
-import { addDataApi, getDataApi } from "../../../services/firebase/api";
+import { createStore, createEffect } from "effector";
 
-import { IArticle } from "../types";
+// import { IArticle } from "../types";
 
-export const clearArticles = createEvent();
+// export const clearArticles = createEvent();
 
 export const fetchArticlesFx = createEffect(async () => {
-  const api = {
-    endpoint: "articles",
-  };
-  const req = await getDataApi(api);
-  return req;
+  // const api = {
+  //   endpoint: "articles",
+  // };
+  const res = await fetch("http://localhost:1337/articles");
+  return res.json();
 });
 
-export const addArticleFx = createEffect(
-  async ({ id }: { id: number }, data: IArticle) => {
-    const api = {
-      endpoint: "articles",
-      id,
-    };
-    const req = await addDataApi(api, data);
-    return req;
-  },
+export const $userArticles = createStore([]).on(
+  fetchArticlesFx.doneData,
+  (_, articles) => articles,
 );
-
-export const $userArticles = createStore([])
-
-addArticleFx.watch((state) => {
-  console.log("im done", state);
-});
 
 $userArticles.watch((state) => {
   console.log("state", state);

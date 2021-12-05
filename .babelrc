@@ -6,6 +6,7 @@
   ],
   "plugins": [
     "react-hot-loader/babel",
+    "effector/babel-plugin",
     "effector-logger/babel-plugin"
   ],
   "env": {

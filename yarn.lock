@@ -4512,23 +4512,23 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-effector-inspector@^0.7.1:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/effector-inspector/-/effector-inspector-0.7.2.tgz#d93a553174d9130674546b17aeec6e709c1dba33"
-  integrity sha512-B9bQq6W1+iYcioig5huqzXP3vSGd++TksoeVRcFqxOBke+xPWC6cPq8M6AM+UHp1yzVaF3i52FnLvEF5n1ZS2w==
+effector-inspector@^0.7.4, effector-inspector@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/effector-inspector/-/effector-inspector-0.7.5.tgz#c3d5e73e20013b3707badc436617b75d3e30ab58"
+  integrity sha512-n110gPIHWr+hEyTCV0AFOTNkYuN7E3SGbADsU7geUkNXzRM5DBCf365ugXF0c0A5EOnfyJXQQlcyY7Z4yLjcmg==
   dependencies:
-    foliage "^0.200.0"
+    foliage "^0.201.0"
     forest "^0.20.2"
 
-effector-logger@^0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/effector-logger/-/effector-logger-0.12.1.tgz#0a9fc5de31df3b60d6dee29a12a8c2148ef56460"
-  integrity sha512-nd4aDx33kpLLijsF2wA0m3bWQ/AJskIzrvzAQiLnK5d8BzEzLgOXXLlSDd4cqlUMEliSn3MgMjfLUkZ0d9Qlqw==
+effector-logger@^0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/effector-logger/-/effector-logger-0.13.1.tgz#e1ee14cb10261a41cb22dee0c66a72f5df106501"
+  integrity sha512-b7UweHdBEfpUDBJ+btMKIH8EWlaMNI5M/+B4TQLFdFHKNjLZYHEE53QKOhRuy+wsofqP5/xfT9V/iOUzm+1AAQ==
   dependencies:
     detect-node "2.0.4"
-    effector-inspector "^0.7.1"
+    effector-inspector "^0.7.4"
     just-debounce-it "^1.1.0"
-    set-value "3.0.1"
+    set-value "4.0.1"
 
 effector-react@^22.0.4:
   version "22.0.4"
@@ -5324,16 +5324,15 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
-foliage@^0.200.0:
-  version "0.200.1"
-  resolved "https://registry.yarnpkg.com/foliage/-/foliage-0.200.1.tgz#86fd9035d3b55145081ab4ff22d0f4f1aaa6ab98"
-  integrity sha512-b8lTdKQBzO85VEi027n9QpmB47bWQXIE784NtdcPFJw9O8rTMJF6dPKR6VK7w+lTuZ0/e/6fJOW/8ZUoScsjcQ==
+foliage@^0.201.0:
+  version "0.201.0"
+  resolved "https://registry.yarnpkg.com/foliage/-/foliage-0.201.0.tgz#87366d9a100d8cec2a5f96621ae33ddd4fe378bf"
+  integrity sha512-RkgGPf0If28rHVfgbjFUHINpMyba0RfiDdtSl0AYED4QGe3il2Y/m/G4+dvI5A9y5EFdBYdfqNZbtoJJiyC4pg==
   dependencies:
     autoprefixer "^10.2.4"
     csso "^4.2.0"
     postcss "^8.2.6"
     postcss-nested "^5.0.3"
-    stylis "^4.0.0"
 
 follow-redirects@^1.0.0:
   version "1.14.1"
@@ -9788,10 +9787,10 @@ set-immediate-shim@~1.0.1:
   resolved "https://registry.yarnpkg.com/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz#4b2b1b27eb808a9f8dcc481a58e5e56f599f3f61"
   integrity sha1-SysbJ+uAip+NzEgaWOXlb1mfP2E=
 
-set-value@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/set-value/-/set-value-3.0.1.tgz#52c82af7653ba69eb1db92e81f5cdb32739b9e95"
-  integrity sha512-w6n3GUPYAWQj4ZyHWzD7K2FnFXHx9OTwJYbWg+6nXjG8sCLfs9DGv+KlqglKIIJx+ks7MlFuwFW2RBPb+8V+xg==
+set-value@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/set-value/-/set-value-4.0.1.tgz#bc23522ade2d52314ec3b5d6fb140f5cd3a88acf"
+  integrity sha512-ayATicCYPVnlNpFmjq2/VmVwhoCQA9+13j8qWp044fmFE3IFphosPtRM+0CJ5xoIx5Uy52fCcwg3XeH2pHbbPQ==
   dependencies:
     is-plain-object "^2.0.4"
 
@@ -10308,11 +10307,6 @@ style-loader@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-3.2.1.tgz#63cb920ec145c8669e9a50e92961452a1ef5dcde"
   integrity sha512-1k9ZosJCRFaRbY6hH49JFlRB0fVSbmnyq1iTPjNxUmGVjBNEmwrrHPenhlp+Lgo51BojHSf6pl2FcqYaN3PfVg==
-
-stylis@^4.0.0:
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.0.10.tgz#446512d1097197ab3f02fb3c258358c3f7a14240"
-  integrity sha512-m3k+dk7QeJw660eIKRRn3xPF6uuvHs/FFzjX3HQ5ove0qYsiygoAhwn5a3IYKaZPo5LrYD0rfVmtv1gNY1uYwg==
 
 supports-color@^2.0.0:
   version "2.0.0"

@@ -24,6 +24,7 @@ $leftSidebarWith: 350px;
 }
 
 .userInfo {
+  position: relative;
   display: flex;
 }
 
@@ -52,4 +53,16 @@ $leftSidebarWith: 350px;
 .rightSidebar {
   border: 1px solid;
   flex: 0 1 20%;
+}
+
+.social {
+  position: absolute;
+  top: 0;
+}
+
+@for $i from 1 through 4 {
+  .social-#{$i} {
+    left: 50% + $i * 14;
+    top: 10% * ($i * 3);
+  }
 }

@@ -19,6 +19,18 @@ export const UserCard = () => {
           <div className="userInfo">
             <div>
               <Avatar size={100} icon={<UserOutlined />} />
+              <div className="social social-1">
+                <Avatar size={40} icon={<UserOutlined />} />
+              </div>
+              <div className="social social-2">
+                <Avatar size={40} icon={<UserOutlined />} />
+              </div>
+              <div className="social social-3">
+                <Avatar size={40} icon={<UserOutlined />} />
+              </div>
+              <div className="social social-4">
+                <Avatar size={40} icon={<UserOutlined />} />
+              </div>
             </div>
           </div>
           {/*<div className="userSocial">User social</div>*/}

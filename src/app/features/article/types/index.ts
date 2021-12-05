@@ -1,8 +1,12 @@
+type ArticleImg = {
+  url: string;
+};
+
 export interface IArticle {
   id: number;
   title: string;
   description: string;
+  content: string;
   createDateTime: Date;
-  tags: Array<number>;
-  filters: Array<number>;
+  mainImg: Array<ArticleImg>;
 }

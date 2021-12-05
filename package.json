@@ -2,26 +2,17 @@
   "name": "react-webpack-typescript-starter",
   "version": "0.1.0",
   "description": "",
-  "keywords": [
-    "react",
-    "webpack",
-    "typescript",
-    "babel",
-    "sass",
-    "hmr",
-    "starter",
-    "boilerplate"
-  ],
+  "keywords": [],
   "author": "",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vikpe/react-webpack-typescript-starter.git"
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/vikpe/react-webpack-typescript-starter/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/vikpe/react-webpack-typescript-starter",
+  "homepage": "",
   "scripts": {
     "build": "yarn run clean-dist && webpack --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
@@ -45,6 +36,7 @@
     "@typescript-eslint/parser": "^4.31.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
+    "effector-inspector": "^0.7.5",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -71,7 +63,7 @@
   "dependencies": {
     "antd": "^4.16.13",
     "effector": "^22.1.1",
-    "effector-logger": "^0.12.1",
+    "effector-logger": "^0.13.1",
     "effector-react": "^22.0.4",
     "faker": "^5.5.3",
     "firebase": "^9.0.2",
