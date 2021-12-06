@@ -68,8 +68,9 @@
     "faker": "^5.5.3",
     "firebase": "^9.0.2",
     "normalize.css": "^8.0.1",
+    "path-to-regexp": "^6.2.0",
     "react-hook-form": "^7.15.3",
     "vanilla-tilt": "^1.7.2",
-    "wouter": "^2.8.0-alpha.2"
+    "wouter": "2.7.5"
   }
 }

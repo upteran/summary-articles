@@ -26,8 +26,8 @@ class App extends React.Component<Record<string, unknown>, undefined> {
           <Route path="/auth">
             <Auth />
           </Route>
-          <Route path="/profile/:name*">
-            <UserCard />
+          <Route path="/profile/:name/:type*">
+            {({ name }) => <UserCard name={name} />}
           </Route>
           <Route path="/registration">reg</Route>
           <Route path="/:rest*">

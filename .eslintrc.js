@@ -24,7 +24,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.jsx", "*.tsx"],
+      files: ["*.jsx", "*.tsx", "*.ts"],
       rules: {
         "@typescript-eslint/explicit-module-boundary-types": ["off"],
         "@typescript-eslint/ban-ts-comment": ["off"],
