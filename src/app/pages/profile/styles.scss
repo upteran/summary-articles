@@ -3,21 +3,23 @@ $leftSidebarWith: 350px;
 .cardWrap {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
+  border: 1px solid;
 }
 
 .userMainText {
-  flex: 1 1 calc(80% - $leftSidebarWith);
-  padding: 35px;
-  min-width: 600px;
+  margin: 0 auto;
+  padding: 35px 72px;
+  width: 100%;
+  max-width: 1100px;
   border: 1px solid;
 }
 
 .userControllers {
-  flex: 0 0 $leftSidebarWith;
   padding: 35px;
   border: 1px solid;
 }
+
 .userName {
   font-size: 24px;
   padding: 15px 35px;
@@ -31,28 +33,44 @@ $leftSidebarWith: 350px;
 .userSocial {
   display: inline-block;
   padding: 6px;
-  border: 1px solid;
 }
 
 .userMenu {
-  margin-top: 68px;
+  margin-top: 48px;
   font-size: 16px;
 }
 
 .userMenuItem {
   a {
+    position: relative;
+    display: inline-block;
     color: black;
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
     transition: color .25s ease-out;
+    overflow: hidden;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background: #000;
+        transform: translate3d(-100%, 0, 0);
+        transition: transform .15s ease-out;
+      } 
       &:hover {
-        color: green;
+        color: #000;
         transition: color .25s ease-out;
+          &:after {
+            transform: translate3d(0, 0, 0);
+            transition: transform .15s ease-out;
+          }
       }
   }
-}
-
-.rightSidebar {
-  border: 1px solid;
-  flex: 0 1 20%;
 }
 
 .social {
@@ -65,4 +83,14 @@ $leftSidebarWith: 350px;
     left: 50% + $i * 14;
     top: 10% * ($i * 3);
   }
+}
+
+.userExtendInfo {
+  font-size: 22px;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 22px;
+    }
 }

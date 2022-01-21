@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import { useStore } from "effector-react";
 import { Link } from "wouter";
-import { List, PageHeader } from "antd";
+import { Row, Col } from "antd";
 
 import { fetchArticlesFx, $userArticles } from "../../store";
 import { IArticle } from "../../types";
+import { InfoCard } from "../../../../../app/components/InfoCard";
+import { Text } from "../../../../../app/components/Text";
+import { Header } from "../../../../../app/components/Header";
 
 type ArticlesListProps = {
   userId: string;
@@ -21,46 +24,31 @@ export const ArticlesList: React.FC<ArticlesListProps> = ({
   return (
     <div className="userArticles">
       <div className="blockTitle">
-        <PageHeader
-          className="site-page-header"
-          title="Title"
-          subTitle="This is a subtitle"
-        />
+        <Header>Guidelines and Resources</Header>
+        <Text>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
+          dolorem illum minus nobis numquam odit officia optio perferendis,
+          perspiciatis praesentium quo, rem sequi soluta ut veritatis! Ad
+          aliquid natus tempora?
+        </Text>
       </div>
       <div className="articleList">
-        <List
-          itemLayout="vertical"
-          size="large"
-          pagination={{
-            onChange: (page) => {
-              console.log(page);
-            },
-            pageSize: 5,
-          }}
-          dataSource={articles}
-          renderItem={(item) => (
-            <List.Item
-              key={item.title}
-              extra={
-                <img
-                  width={172}
-                  alt="logo"
-                  src={`http://localhost:1337${item.mainImg[0].url}`}
-                />
-              }
-            >
-              <List.Item.Meta
-                title={
-                  <Link href={`/profile/${userId}/article/${item.id}`}>
-                    {item.title}
+        <Header>Guidelines and Resources</Header>
+        <Row justify="start" gutter={[32, 24]}>
+          {articles.map(({ title, id, description, mainImg, content }) => (
+            <Col span={8} key={id}>
+              <InfoCard
+                buttonCtx={
+                  <Link href={`/profile/${userId}/article/${id}`}>
+                    Посмотреть поближе
                   </Link>
                 }
-                description={item.description}
+                title={title}
+                description={content}
               />
-              {item.content}
-            </List.Item>
-          )}
-        />
+            </Col>
+          ))}
+        </Row>
       </div>
     </div>
   );

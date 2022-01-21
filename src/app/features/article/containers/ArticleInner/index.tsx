@@ -1,10 +1,16 @@
 import React from "react";
-import { PageHeader } from "antd";
 import { useStoreMap } from "effector-react";
 import { useLocation } from "wouter";
 
+import { ArrowLeftOutlined } from "@ant-design/icons";
+
 import { $userArticles } from "../../store";
 import { IArticle } from "../../types";
+
+import { Text } from "components/Text";
+import { Header } from "../../../../../app/components/Header";
+
+import "./styles.scss";
 
 export const ArticleInner = ({ id }: { id: string }) => {
   const [location, setLocation] = useLocation();
@@ -18,19 +24,22 @@ export const ArticleInner = ({ id }: { id: string }) => {
     setLocation(location.replace(`article/${id}`, "articles"));
   };
   if (!article) return null;
-  const { title, published_at, content }: IArticle = article;
+  const { title, content }: IArticle = article;
   return (
     <>
       <div className="article">
-        <div className="articleTitle">
-          <PageHeader
-            className="site-page-header"
-            onBack={onBackClick}
-            title={title}
-            subTitle={published_at}
+        <Header>{title}</Header>
+        <Text>{content}</Text>
+        <div className="returnBtnWrap" onClick={onBackClick}>
+          <ArrowLeftOutlined
+            style={{
+              fontSize: "22px",
+              fontWeight: "bold",
+              marginRight: "12px",
+            }}
           />
+          <div className="returnBtnText">back</div>
         </div>
-        <div className="articleText">{content}</div>
       </div>
     </>
   );

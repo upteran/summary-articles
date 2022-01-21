@@ -9,12 +9,9 @@ $border-color: red;
 
 .app {
   font-family: helvetica, arial, sans-serif;
-  padding: 2em;
-  border: 5px solid $border-color;
+}
+
+.main {
   max-width: 1600px;
   margin: 0 auto;
-
-  p {
-    background-color: $bg-color;
-  }
 }

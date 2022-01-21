@@ -10,6 +10,8 @@ import { ArticleInner } from "../../features/article/containers/ArticleInner";
 import { $user, fetchUserFx } from "../../features/user/store";
 import { IUserData } from "../../features/user/types";
 
+import { Header } from "../../components/Header";
+
 import "./styles.scss";
 
 export const UserCard = ({ name }: { name: string }) => {
@@ -19,11 +21,11 @@ export const UserCard = ({ name }: { name: string }) => {
   const userData: IUserData = useStore($user);
   return (
     <>
-      <div>
-        <div className="userName">
-          {`${userData.firstName} ${userData.lastName}`}
-        </div>
-      </div>
+      {/*<div>*/}
+      {/*  <div className="userName">*/}
+      {/*    {`${userData.firstName} ${userData.lastName}`}*/}
+      {/*  </div>*/}
+      {/*</div>*/}
       <div className="cardWrap">
         <div className="userControllers">
           <div className="userInfo">
@@ -64,11 +66,22 @@ export const UserCard = ({ name }: { name: string }) => {
             <Route path="/profile/:name/articles">
               <ArticlesList userId="pezeze" />
             </Route>
-            <Route path="/profile/:name/work">work</Route>
-            <Route path="/profile/:name/skills">skills</Route>
+            <Route path="/profile/:name/work">
+              <div className="userExtendInfo">
+                <Header>Work</Header>
+                <div dangerouslySetInnerHTML={{ __html: `${userData.work}` }} />
+              </div>
+            </Route>
+            <Route path="/profile/:name/skills">
+              <div className="userExtendInfo">
+                <Header>Skills</Header>
+                <div
+                  dangerouslySetInnerHTML={{ __html: `${userData.skills}` }}
+                />
+              </div>
+            </Route>
           </Switch>
         </div>
-        <div className="rightSidebar" />
       </div>
     </>
   );

@@ -1,30 +1,25 @@
-import React, { useRef, useEffect } from "react";
-import VanillaTilt from "vanilla-tilt";
+import React, { useRef } from "react";
+import { ButtonWrap } from "../ButtonWrap";
 
 import "./styles.scss";
 
 type InfoCardType = {
-  imgSrc: string;
+  imgSrc?: string;
   title: string;
   description: string;
+  buttonCtx: React.Component;
 };
 
-export const InfoCard = ({ imgSrc, title, description }: InfoCardType) => {
+export const InfoCard = ({ title, description, buttonCtx }: InfoCardType) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (cardRef?.current) {
-      VanillaTilt.init(cardRef.current, {
-        max: 25,
-        speed: 400,
-      });
-    }
-  }, [cardRef]);
   return (
     <div className="card" ref={cardRef}>
-      <img src={imgSrc} alt="" className="cardImg" />
       <div className="cardContent">
         <div className="cardTitle">{title}</div>
         <div className="cardDescription">{description}</div>
+        <div className="btnWrap">
+          <ButtonWrap tag="div">{buttonCtx}</ButtonWrap>
+        </div>
       </div>
     </div>
   );
