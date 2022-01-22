@@ -7,6 +7,10 @@ $border-color: red;
   margin: 0;
 }
 
+body {
+  min-width: 1200px;
+}
+
 .app {
   font-family: helvetica, arial, sans-serif;
 }

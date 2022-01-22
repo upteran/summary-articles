@@ -4,13 +4,13 @@ import { Route, Switch, Link } from "wouter";
 import Avatar from "antd/lib/avatar";
 import { UserOutlined } from "@ant-design/icons";
 
-import { ArticlesList } from "../../features/article/containers/ArticlesList";
-import { ArticleInner } from "../../features/article/containers/ArticleInner";
+import { ArticlesList } from "@features/article/containers/ArticlesList";
+import { ArticleInner } from "@features/article/containers/ArticleInner";
+import { Header } from "@components/Header";
+import { HtmlTextRender } from "@components/HtmlTextRender";
 
 import { $user, fetchUserFx } from "../../entity/user/store";
 import { IUserData } from "../../entity/user/types";
-
-import { Header } from "../../components/Header";
 
 import "./styles.scss";
 
@@ -54,7 +54,7 @@ export const UserCard = ({ name }: { name: string }) => {
               <Link href={`/profile/${name}/work`}>work</Link>
             </div>
             <div className="userMenuItem">
-              <Link href={`/profile/${name}/articles`}>articles</Link>
+              <Link href={`/profile/${name}/articles`}>sharebox</Link>
             </div>
           </div>
         </div>
@@ -69,14 +69,18 @@ export const UserCard = ({ name }: { name: string }) => {
             <Route path="/profile/:name/work">
               <div className="userExtendInfo">
                 <Header>Work</Header>
-                <div dangerouslySetInnerHTML={{ __html: `${userData.work}` }} />
+                <HtmlTextRender
+                  data={userData.work}
+                  styleClassName="workContent"
+                />
               </div>
             </Route>
             <Route path="/profile/:name/skills">
               <div className="userExtendInfo">
                 <Header>Skills</Header>
-                <div
-                  dangerouslySetInnerHTML={{ __html: `${userData.skills}` }}
+                <HtmlTextRender
+                  data={userData.skills}
+                  styleClassName="skillsContent"
                 />
               </div>
             </Route>
