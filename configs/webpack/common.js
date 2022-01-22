@@ -7,6 +7,13 @@ module.exports = {
   resolve: {
     plugins: [new TsconfigPathsPlugin()],
     extensions: [".js", ".jsx", ".ts", ".tsx"],
+    alias: {
+      "@components": resolve(__dirname, "../../src/app/components/"),
+      "@features": resolve(__dirname, "../../src/app/features/"),
+      "@layouts": resolve(__dirname, "../../src/app/layouts/"),
+      "@pages": resolve(__dirname, "../../src/app/pages/"),
+      "@services": resolve(__dirname, "../../src/app/services/"),
+    },
   },
   context: resolve(__dirname, "../../src"),
   module: {

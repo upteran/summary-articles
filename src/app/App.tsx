@@ -2,7 +2,7 @@ import * as React from "react";
 import { hot } from "react-hot-loader";
 import { Route, Switch } from "wouter";
 
-import { Header } from "./layouts/Header";
+import { Header } from "@layouts/Header";
 
 // pages
 import { MainPage } from "./pages/index";

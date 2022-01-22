@@ -4,11 +4,11 @@ import { useLocation } from "wouter";
 
 import { ArrowLeftOutlined } from "@ant-design/icons";
 
+import { Text } from "../../../../components/Text";
+import { Header } from "../../../../components/Header";
+
 import { $userArticles } from "../../store";
 import { IArticle } from "../../types";
-
-import { Text } from "components/Text";
-import { Header } from "../../../../../app/components/Header";
 
 import "./styles.scss";
 

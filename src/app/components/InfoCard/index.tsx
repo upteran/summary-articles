@@ -7,7 +7,7 @@ type InfoCardType = {
   imgSrc?: string;
   title: string;
   description: string;
-  buttonCtx: React.Component;
+  buttonCtx: any;
 };
 
 export const InfoCard = ({ title, description, buttonCtx }: InfoCardType) => {

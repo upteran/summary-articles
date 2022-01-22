@@ -7,8 +7,8 @@ import { UserOutlined } from "@ant-design/icons";
 import { ArticlesList } from "../../features/article/containers/ArticlesList";
 import { ArticleInner } from "../../features/article/containers/ArticleInner";
 
-import { $user, fetchUserFx } from "../../features/user/store";
-import { IUserData } from "../../features/user/types";
+import { $user, fetchUserFx } from "../../entity/user/store";
+import { IUserData } from "../../entity/user/types";
 
 import { Header } from "../../components/Header";
 
